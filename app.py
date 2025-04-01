@@ -25,7 +25,26 @@ st.set_page_config(
 )
 
 st.title("Global Center of Gravity Calculator")
-
+with st.expander("Connect with Me"):
+        st.markdown("""
+                    **Author**: Copyright (c) 2025 **Nguyen Manh Tuan**
+    <style>
+        .social-buttons img {
+            transition: opacity 0.3s;
+        }
+        .social-buttons img:hover {
+            opacity: 0.7;
+        }
+    </style>
+    <div class="social-buttons" style="display: flex; gap: 20px; align-items: center;">
+        <a href="https://github.com/Nahbruhh" target="_blank">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="40">
+        </a>
+        <a href="https://www.linkedin.com/in/manh-tuan-nguyen19/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" width="100">
+        </a>
+    </div>
+""", unsafe_allow_html=True)
 st.write("Enter the element details in the table below:")
 st.info("""
 Each row represents an element in the system. Enter the X, Y, and Z coordinates for the element's center of gravity along with its mass.
