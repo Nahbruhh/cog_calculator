@@ -22,7 +22,7 @@ st.set_page_config(
 st.title("Global Center of Gravity Calculator")
 with st.expander("Connect with Me"):
         st.markdown("""
-                    **Author**: Copyright (c) 2025 **Nguyen Manh Tuan**
+                    **Author**: Copyright (c) **Nguyen Manh Tuan**
     <style>
         .social-buttons img {
             transition: opacity 0.3s;
