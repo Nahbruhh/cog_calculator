@@ -36,7 +36,7 @@ with st.expander("Connect with Me"):
             <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="40">
         </a>
         <a href="https://www.linkedin.com/in/manh-tuan-nguyen19/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" width="100">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" width="100">
         </a>
     </div>
 """, unsafe_allow_html=True)
