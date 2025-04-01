@@ -84,13 +84,14 @@ with col1:
 with col2:
     st.info("Description image")
     st.image("assets/image.png")
+unit_length = st.selectbox("Length Unit", ["m", "cm", "ft"], index=0)
 
 
 if st.button("Compute COG"):
     elements = [tuple(row) for row in df.to_numpy()]
     st.session_state.cog = compute_global_cog(elements)
     cog = st.session_state.cog
-    st.write(f"**Global Center of Gravity (COG):** ({cog[0]:.2f}, {cog[1]:.2f}, {cog[2]:.2f})")
+    st.write(f"**Global Center of Gravity (COG):** ({cog[0]:.2f} {unit_length}, {cog[1]:.2f} {unit_length}, {cog[2]:.2f} {unit_length})")
 
 if st.button("Visualize COG"):
     cog = st.session_state.get("cog", (None, None, None))
@@ -117,9 +118,9 @@ if st.button("Visualize COG"):
         fig.update_layout(
             title="Center of Gravity Visualization",
             scene=dict(
-                xaxis_title="X Coordinate",
-                yaxis_title="Y Coordinate",
-                zaxis_title="Z Coordinate"
+                xaxis_title=f"X Coordinate({unit_length})",
+                yaxis_title=f"Y Coordinate({unit_length})",
+                zaxis_title=f"Z Coordinate({unit_length})"
             ),
             margin=dict(l=0, r=0, b=0, t=40),
            autosize = True
