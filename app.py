@@ -5,11 +5,6 @@ import plotly.graph_objects as go
 import os
 
 def compute_global_cog(elements):
-    """
-    Compute the global center of gravity (COG) for multiple elements.
-    :param elements: List of tuples (x, y, z, mass)
-    :return: (X_COG, Y_COG, Z_COG)
-    """
     total_mass = sum(m for _, _, _, m in elements)
     if total_mass == 0:
         return (None, None, None)
