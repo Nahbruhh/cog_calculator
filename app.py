@@ -86,13 +86,14 @@ if st.button("Compute COG"):
     elements = [tuple(row) for row in df.to_numpy()]
     st.session_state.cog = compute_global_cog(elements)
     cog = st.session_state.cog
-    st.write(f"**Global Center of Gravity (COG):** ({cog[0]:.2f} {unit_length}, {cog[1]:.2f} {unit_length}, {cog[2]:.2f} {unit_length})")
+    st.info(f"**Global Center of Gravity (COG):** ({cog[0]:.2f} {unit_length}, {cog[1]:.2f} {unit_length}, {cog[2]:.2f} {unit_length})")
 
 if st.button("Visualize COG"):
     cog = st.session_state.get("cog", (None, None, None))
     if cog == (None, None, None):
         st.warning("Please compute the COG first.")
     else:
+        st.info(f"**Global Center of Gravity (COG):** ({cog[0]:.2f} {unit_length}, {cog[1]:.2f} {unit_length}, {cog[2]:.2f} {unit_length})")
         fig = go.Figure()
         fig.add_trace(go.Scatter3d(
             x=df["X"], y=df["Y"], z=df["Z"],
