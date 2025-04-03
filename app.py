@@ -79,7 +79,7 @@ with col1:
 with col2:
     st.info("Description image")
     st.image("assets/image.png")
-unit_length = st.selectbox("Length Unit", ["m", "cm", "ft"], index=0)
+unit_length = st.selectbox("Length Unit", ["m", "cm", "mm"], index=0)
 
 
 if st.button("Compute COG"):
